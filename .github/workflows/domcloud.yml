@@ -5,10 +5,10 @@ name: Sync on DOM Cloud
     branches:
       - main
 jobs:
-  build:
+  push:
     runs-on: ubuntu-latest
     steps:
-        - name: Invoke SGA deployment hook
+      - name: Invoke SGA deployment hook
         uses: distributhor/workflow-webhook@v3
         env:
           webhook_url: ${{ secrets.WEBHOOK_URL_SGA }}
